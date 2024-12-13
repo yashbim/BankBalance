@@ -14,6 +14,7 @@ public class BankAccount {
         this.email = email;
         if (contact_number.length() != 10) {
             System.out.println("Contact number must be 10 digits in length.");
+            this.contact_number = "INVALID";
         } else {
             this.contact_number = contact_number;
         }
