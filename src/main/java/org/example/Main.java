@@ -9,6 +9,17 @@ public class Main {
         account1.setBalance(100000);
         account1.setEmail("ybimsara03@gmail.com");
         account1.setContactNumber("0767329685");
+
+        printAccountDetails(account1);
+
+    }
+
+    public static void printAccountDetails(BankAccount account1) {
+        System.out.println(account1.getAccount_number());
+        System.out.println(account1.getAccount_name());
+        System.out.println(account1.getBalance());
+        System.out.println(account1.getEmail());
+        System.out.println(account1.getContact_number());
     }
 
 }
