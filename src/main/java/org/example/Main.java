@@ -12,6 +12,8 @@ public class Main {
 
         printAccountDetails(account1);
 
+        account1.depositMoney(12000);
+
     }
 
     public static void printAccountDetails(BankAccount account1) {

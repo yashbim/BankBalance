@@ -7,6 +7,13 @@ public class BankAccount {
     private String email;
     private String contact_number;
 
+    public void depositMoney(double depositAmount){
+        this.balance += depositAmount;
+        System.out.println("Account " + this.account_number +
+                " was deposited by Rs." + depositAmount +
+                ". New balance is Rs." + this.balance);
+    }
+
     //setter
     public void setAccountNumber(String accNum) {
         this.account_number = accNum;
