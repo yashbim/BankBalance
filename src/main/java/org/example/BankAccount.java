@@ -12,7 +12,11 @@ public class BankAccount {
         this.account_name = account_name;
         this.balance = balance;
         this.email = email;
-        this.contact_number = contact_number;
+        if (contact_number.length() != 10) {
+            System.out.println("Contact number must be 10 digits in length.");
+        } else {
+            this.contact_number = contact_number;
+        }
     }
 
     public void depositMoney(double depositAmount){

@@ -7,7 +7,7 @@ public class Main {
                                                 "MAYB Madurapperuma",
                                                 100000,
                                                 "ybimsara03@gmail.com",
-                                                "0767329685");
+                                                "076732968");
 
         printAccountDetails(account1);
 
