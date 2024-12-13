@@ -13,6 +13,7 @@ public class Main {
 
         account1.depositMoney(12000);
         account1.withdrawMoney(500000);
+        account1.withdrawMoney(10000);
 
     }
 
