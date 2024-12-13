@@ -33,23 +33,6 @@ public class BankAccount {
         }
     }
 
-    //setter
-    public void setAccountNumber(String accNum) {
-        this.account_number = accNum;
-    }
-    public void setAccountName(String accName) {
-        this.account_name = accName;
-    }
-    public void setBalance(double accBal) {
-        this.balance = accBal;
-    }
-    public void setEmail(String accEmail) {
-        this.email = accEmail;
-    }
-    public void setContactNumber(String accContact) {
-        this.contact_number = accContact;
-    }
-
     //Getters
     public String getAccount_number() {
         return account_number;
