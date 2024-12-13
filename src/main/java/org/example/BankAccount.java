@@ -14,6 +14,17 @@ public class BankAccount {
                 ". New balance is Rs." + this.balance);
     }
 
+    public void withdrawMoney(double withdrawAmount){
+        if (this.balance < withdrawAmount){
+            System.out.println("Insufficient funds. Your current balance is Rs." + this.balance);
+        } else {
+            this.balance -= withdrawAmount;
+            System.out.println("Account " + this.account_number +
+                    " was withdrawn by Rs." + withdrawAmount +
+                    ". New balance is Rs." + this.balance);
+        }
+    }
+
     //setter
     public void setAccountNumber(String accNum) {
         this.account_number = accNum;
