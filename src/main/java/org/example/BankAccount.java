@@ -7,6 +7,14 @@ public class BankAccount {
     private String email;
     private String contact_number;
 
+    public BankAccount(String account_number, String account_name, double balance, String email, String contact_number) {
+        this.account_number = account_number;
+        this.account_name = account_name;
+        this.balance = balance;
+        this.email = email;
+        this.contact_number = contact_number;
+    }
+
     public void depositMoney(double depositAmount){
         this.balance += depositAmount;
         System.out.println("Account " + this.account_number +
@@ -29,11 +37,11 @@ public class BankAccount {
     public void setAccountNumber(String accNum) {
         this.account_number = accNum;
     }
-    public void setBalance(double accBal) {
-        this.balance = accBal;
-    }
     public void setAccountName(String accName) {
         this.account_name = accName;
+    }
+    public void setBalance(double accBal) {
+        this.balance = accBal;
     }
     public void setEmail(String accEmail) {
         this.email = accEmail;

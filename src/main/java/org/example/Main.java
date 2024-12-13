@@ -3,17 +3,16 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        BankAccount account1 = new BankAccount();
-        account1.setAccountNumber("00026200100069501");
-        account1.setAccountName("MAYB Madurapperuma");
-        account1.setBalance(100000);
-        account1.setEmail("ybimsara03@gmail.com");
-        account1.setContactNumber("0767329685");
+        BankAccount account1 = new BankAccount("00026200100069501",
+                                                "MAYB Madurapperuma",
+                                                100000,
+                                                "ybimsara03@gmail.com",
+                                                "0767329685");
 
         printAccountDetails(account1);
 
         account1.depositMoney(12000);
-        account1.withdrawMoney(5000);
+        account1.withdrawMoney(500000);
 
     }
 
