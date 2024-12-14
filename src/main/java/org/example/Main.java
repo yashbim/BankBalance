@@ -1,5 +1,6 @@
 package org.example;
 
+import java.nio.channels.ScatteringByteChannel;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -13,6 +14,7 @@ public class Main {
         double accBalance;
         String accEmail;
         String accContact;
+        char withdrawOrDeposti;
 
         System.out.println("Welcome to Bank Manager");
         System.out.println("Please enter your account number: ");
@@ -25,6 +27,23 @@ public class Main {
         accEmail = myscanner.nextLine();
         System.out.println("Please enter your account contact: ");
         accContact = myscanner.nextLine();
+
+        System.out.println("Do you wish to withdraw or deposit money? Enter 'w' for withdraw and 'd' for deposit.");
+        withdrawOrDeposti = myscanner.next().charAt(0);
+
+        try {
+            switch (withdrawOrDeposti) {
+                case 'w':System.out.println("Your want to withdraw");
+                break;
+                case 'd':System.out.println("Your want to deposit");
+                break;
+                default:
+                    System.out.println("Invalid withdraw or denomination");
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid withdraw or denomination");
+        }
 
         BankAccount account1 = new BankAccount("00026200100069501",
                                                 "MAYB Madurapperuma",
