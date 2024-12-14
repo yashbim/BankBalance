@@ -8,23 +8,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner myscanner = new Scanner(System.in);
 
-
-
-        String accNumber;
+        String sampleAccNumber = "00026200100069501";
         String accName = "MAYB MADURAPPERUMA";
         double accBalance = 100000;
         String accEmail = "ybimsara03@gmail.com";
         String accContact = "0767329685";
         char withdrawOrDeposit;
-        String pin = "0000";
+        String samplePin = "0000";
 
         System.out.println("Welcome to Bank Manager");
         System.out.println("Please enter your account number: ");
-        accNumber = myscanner.nextLine();
+        String accNumber = myscanner.nextLine();
         System.out.println("Please enter your pin: ");
-        pin = myscanner.nextLine();
+        String pin = myscanner.nextLine();
+
+        String verifiedAccNumber = loginVerify(accNumber,sampleAccNumber, pin, samplePin);
 
 
+        System.out.println("Welcome Mr/Mrs " + accName);
         System.out.println("Your balance is: " + accBalance);
 
         System.out.println("Do you wish to withdraw or deposit money? Enter 'w' for withdraw and 'd' for deposit.");
@@ -54,6 +55,14 @@ public class Main {
             System.out.println("Invalid withdraw or denomination");
         }
 
+    }
+    public static String loginVerify(String AccountNumber, String sampleAccNumber, String pin, String samplePin) {
+        if((AccountNumber.equals(sampleAccNumber)) && (pin.equals(samplePin))){
+            return AccountNumber;
+        } else {
+            System.out.println("Invalid account number");
+            return null;
+        }
     }
 
     public static int withdrawAmount(double accBalance) {
