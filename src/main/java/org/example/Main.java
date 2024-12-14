@@ -10,10 +10,21 @@ public class Main {
 
         String accNumber;
         String accName;
-        double balance;
+        double accBalance;
         String accEmail;
         String accContact;
 
+        System.out.println("Welcome to Bank Manager");
+        System.out.println("Please enter your account number: ");
+        accNumber = myscanner.nextLine();
+        System.out.println("Please enter your account name: ");
+        accName = myscanner.nextLine();
+//        System.out.println("Please enter your balance: ");
+//        accBalance = myscanner.nextDouble();
+        System.out.println("Please enter your account email: ");
+        accEmail = myscanner.nextLine();
+        System.out.println("Please enter your account contact: ");
+        accContact = myscanner.nextLine();
 
         BankAccount account1 = new BankAccount("00026200100069501",
                                                 "MAYB Madurapperuma",
