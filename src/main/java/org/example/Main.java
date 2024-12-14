@@ -1,6 +1,5 @@
 package org.example;
 
-import java.nio.channels.ScatteringByteChannel;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,7 +10,7 @@ public class Main {
 
         String accNumber;
         String accName;
-        double accBalance;
+        double accBalance = 100000;
         String accEmail;
         String accContact;
         char withdrawOrDeposti;
@@ -21,12 +20,12 @@ public class Main {
         accNumber = myscanner.nextLine();
         System.out.println("Please enter your account name: ");
         accName = myscanner.nextLine();
-//        System.out.println("Please enter your balance: ");
-//        accBalance = myscanner.nextDouble();
         System.out.println("Please enter your account email: ");
         accEmail = myscanner.nextLine();
         System.out.println("Please enter your account contact: ");
         accContact = myscanner.nextLine();
+
+        System.out.println("Your balance is: " + accBalance);
 
         System.out.println("Do you wish to withdraw or deposit money? Enter 'w' for withdraw and 'd' for deposit.");
         withdrawOrDeposti = myscanner.next().charAt(0);
@@ -34,7 +33,9 @@ public class Main {
         try {
             switch (withdrawOrDeposti) {
                 case 'w':System.out.println("Your want to withdraw");
-                break;
+                    int amount = withdrawAmount();
+                    BankAccount account1 = new BankAccount(accNumber,   accName, accBalance - amount, accEmail, accContact);
+                    break;
                 case 'd':System.out.println("Your want to deposit");
                 break;
                 default:
@@ -48,6 +49,14 @@ public class Main {
         BankAccount account1 = new BankAccount(accNumber,   accName, 100000, accEmail, accContact);
 
         printAccountDetails(account1);
+
+    }
+    
+    public static int withdrawAmount() {
+        Scanner myscanner = new Scanner(System.in);
+        System.out.println("Enter amount to withdraw: ");
+        int amount = myscanner.nextInt();
+        return amount;
 
     }
 
