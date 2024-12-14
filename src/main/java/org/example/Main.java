@@ -45,17 +45,9 @@ public class Main {
             System.out.println("Invalid withdraw or denomination");
         }
 
-        BankAccount account1 = new BankAccount("00026200100069501",
-                                                "MAYB Madurapperuma",
-                                                100000,
-                                                "ybimsara03@gmail.com",
-                                                "076732968");
+        BankAccount account1 = new BankAccount(accNumber,   accName, 100000, accEmail, accContact);
 
         printAccountDetails(account1);
-
-        account1.depositMoney(12000);
-        account1.withdrawMoney(500000);
-        account1.withdrawMoney(10000);
 
     }
 
