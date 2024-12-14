@@ -11,22 +11,19 @@ public class Main {
 
 
         String accNumber;
-        String accName;
+        String accName = "MAYB MADURAPPERUMA";
         double accBalance = 100000;
-        String accEmail;
-        String accContact;
+        String accEmail = "ybimsara03@gmail.com";
+        String accContact = "0767329685";
         char withdrawOrDeposit;
         String pin = "0000";
 
         System.out.println("Welcome to Bank Manager");
         System.out.println("Please enter your account number: ");
         accNumber = myscanner.nextLine();
-        System.out.println("Please enter your account name: ");
-        accName = myscanner.nextLine();
-        System.out.println("Please enter your account email: ");
-        accEmail = myscanner.nextLine();
-        System.out.println("Please enter your account contact: ");
-        accContact = myscanner.nextLine();
+        System.out.println("Please enter your pin: ");
+        pin = myscanner.nextLine();
+
 
         System.out.println("Your balance is: " + accBalance);
 
@@ -48,7 +45,7 @@ public class Main {
                     printAccountDetails(account2);
                     System.out.println("Deposit of Rs." + deposit_amount + " made." +
                             " Your account balance is: " + account2.getBalance());
-                return;
+                    return;
                 default:
                     System.out.println("Invalid withdraw or denomination");
                     break;
