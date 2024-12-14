@@ -33,11 +33,13 @@ public class Main {
         try {
             switch (withdrawOrDeposti) {
                 case 'w':System.out.println("Your want to withdraw");
-                    int amount = withdrawAmount();
-                    BankAccount account1 = new BankAccount(accNumber,   accName, accBalance - amount, accEmail, accContact);
-                    break;
+                    int withdraw_amount = withdrawAmount();
+                    BankAccount account1 = new BankAccount(accNumber,   accName, accBalance - withdraw_amount, accEmail, accContact);
+                    return;
                 case 'd':System.out.println("Your want to deposit");
-                break;
+                    int deposit_amount = depositAmount();
+                    BankAccount account2 = new BankAccount(accNumber, accName, accBalance + deposit_amount, accEmail, accContact);
+                return;
                 default:
                     System.out.println("Invalid withdraw or denomination");
                     break;
@@ -46,13 +48,19 @@ public class Main {
             System.out.println("Invalid withdraw or denomination");
         }
 
-        BankAccount account1 = new BankAccount(accNumber,   accName, 100000, accEmail, accContact);
-
-        printAccountDetails(account1);
+//        printAccountDetails(account1);
 
     }
-    
+
     public static int withdrawAmount() {
+        Scanner myscanner = new Scanner(System.in);
+        System.out.println("Enter amount to withdraw: ");
+        int amount = myscanner.nextInt();
+        return amount;
+
+    }
+
+    public static int depositAmount() {
         Scanner myscanner = new Scanner(System.in);
         System.out.println("Enter amount to withdraw: ");
         int amount = myscanner.nextInt();
