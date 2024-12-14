@@ -8,6 +8,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner myscanner = new Scanner(System.in);
 
+        String accNumber;
+        String accName;
+        double balance;
+        String accEmail;
+        String accContact;
+
+
         BankAccount account1 = new BankAccount("00026200100069501",
                                                 "MAYB Madurapperuma",
                                                 100000,
