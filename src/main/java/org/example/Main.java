@@ -15,7 +15,7 @@ public class Main {
         double accBalance = 100000;
         String accEmail;
         String accContact;
-        char withdrawOrDeposti;
+        char withdrawOrDeposit;
         String pin = "0000";
 
         System.out.println("Welcome to Bank Manager");
@@ -31,10 +31,10 @@ public class Main {
         System.out.println("Your balance is: " + accBalance);
 
         System.out.println("Do you wish to withdraw or deposit money? Enter 'w' for withdraw and 'd' for deposit.");
-        withdrawOrDeposti = myscanner.next().charAt(0);
+        withdrawOrDeposit = myscanner.next().charAt(0);
 
         try {
-            switch (withdrawOrDeposti) {
+            switch (withdrawOrDeposit) {
                 case 'w':System.out.println("Your want to withdraw");
                     int withdraw_amount = withdrawAmount(accBalance);
                     BankAccount account1 = new BankAccount(accNumber,   accName, accBalance - withdraw_amount, accEmail, accContact);
