@@ -8,12 +8,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner myscanner = new Scanner(System.in);
 
+
+
         String accNumber;
         String accName;
         double accBalance = 100000;
         String accEmail;
         String accContact;
         char withdrawOrDeposti;
+        String pin = "0000";
 
         System.out.println("Welcome to Bank Manager");
         System.out.println("Please enter your account number: ");
